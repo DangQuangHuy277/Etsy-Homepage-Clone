@@ -1,0 +1,633 @@
+/* Generic styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    box-sizing: border-box;
+    border-radius: inherit;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #222;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: "Guardian-EgypTT", Charter, "Charter Bitstream",
+        Cambria, "Noto Serif Light", "Droid Serif", Georgia, serif;
+    ;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* Header */
+
+header {
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+    padding: 12px 36px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    padding-right: 8px;
+    height: 48px;
+    flex: 0;
+
+}
+
+header .logo img {
+    box-sizing: content-box;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 80px;
+    height: 40px;
+    max-width: 80px;
+    max-height: 40px;
+}
+
+/* Styling the search bar */
+
+header .search-bar {
+    /* border: #222 solid 1px; */
+    padding-right: 0px;
+    width: 100%;
+    height: 48px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 48px;
+
+    border: #222 2px groove;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header .search-bar input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 9px 42px 9px 18px;
+    outline: none;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+header .search-bar button {
+    width: 64px;
+    padding-right: 24px;
+    border-radius: 0 24px 24px 0;
+    font-size: 24px;
+    background: none;
+    cursor: pointer;
+}
+
+header .search-bar button:focus {
+    background-color: #222;
+    color: #fff;
+}
+
+
+
+/* Styling the header buttons */
+header .header-button ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header .header-button ul li {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+header .header-button ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+header .header-button ul li a {
+    text-decoration: none;
+    color: #222;
+    text-align: center;
+}
+
+header .header-button ul li:first-child {
+    min-width: 96px;
+    min-height: 36px;
+    text-align: center;
+    border-radius: 35%;
+    font-size: 16px;
+    font-weight: 60;
+}
+
+/* Styling navigation */
+.navigation-list {
+    margin: auto;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding-left: 36px;
+    padding-right: 36px;
+    max-width: 1400px;
+    height: auto;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #222;
+}
+
+.navigation ul li {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 120%;
+    background-color: #fff;
+    display: none;
+    z-index: 1;
+}
+
+.navigation-list>li:hover .dropdown {
+    display: block;
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    list-style: none;
+}
+
+.dropdown-list li {
+    display: block;
+    width: 100%;
+    padding: 9px 0 9px 18px;
+}
+
+.dropdown-list li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-list li:first-child{
+    font-weight: 600;
+}
+
+/* Styling the main content */
+
+/* Styling the top banner */
+
+.top-banner-content {
+    background-image: -webkit-linear-gradient(top, #ddebe3, #ddebe3 70%, transparent 70%, transparent 100%);
+}
+
+.top-banner-content h1 {
+    font-size: 32px;
+    text-align: center;
+    padding: 18px;
+    background-color: #ddebe3;
+}
+
+.top-banner-content ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 36px;
+    padding-right: 36px;
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+}
+
+
+.top-banner-content ul li {
+    padding: 9px 30px;
+    flex: 0;
+}
+
+.top-banner-content ul li a {
+    text-align: center;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid transparent;
+    margin-top: 12px;
+}
+
+.top-banner-content ul li img {
+    border-radius: 50%;
+    width: 114px;
+    height: 114px;
+}
+
+.top-banner-content ul li a:hover {
+    border-bottom: 2px solid #595959;
+}
+
+.top-banner-content ul li a:hover>img {
+    box-shadow: 0 4px 18px rgba(34, 34, 34, 0.35);
+    transform: scale(1.08);
+    transition: transform .3s ease;
+}
+
+.top-banner-content ul li p {
+    padding-top: 6px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Styling the popular gifts */
+
+.popular-gift {
+    max-width: 1400px;
+    margin: auto;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 90px;
+    margin-top: 36px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.popular-gift-list {
+    max-width: 1400px;
+    display: flex;
+}
+
+.popular-gift-item {
+    flex: 1;
+    flex-basis: 20%;
+    max-width: 20%;
+    padding: 9px;
+}
+
+.popular-gift-item a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #222;
+}
+
+.popular-gift-item img,
+.popular-gift-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.popular-gift-item video {
+    max-height: 200px;
+}
+
+.popular-gift-item h3 {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+}
+
+.popular-gift-item .rate {
+    display: block;
+}
+
+.popular-gift-item .rate .review {
+    color: #595959;
+}
+
+.popular-gift-item .price .sale-price {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.popular-gift-item .price .old-price,
+.popular-gift-item .price .sale-percent {
+    color: rgb(14, 107, 52);
+}
+
+.popular-gift-item .price .old-price {
+    text-decoration: line-through;
+}
+
+.popular-gift-item .tag {
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: rgb(123, 233, 169);
+    padding: 4px;
+    color: #222;
+    font-weight: 600;
+}
+
+.popular-gift-item a:hover {
+    transform: scale(1.08);
+    transition: ease .3s;
+    box-shadow: 0px 4px 20px rgba(34, 34, 34, 0.35);
+}
+
+/* Styling the popular categories */
+
+.popular-categories {
+    max-width: 1400px;
+    margin: auto;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 90px;
+    margin-top: 36px;
+}
+
+.popular-categories-content .popular-categories-list {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.popular-categories .popular-categories-item {
+    flex: 1;
+    flex-basis: 20%;
+    max-width: 20%;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-categories-item a {
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-radius: 9px;
+}
+
+.popular-categories-item img {
+    width: 100%;
+    border-radius: inherit;
+    height: auto;
+}
+
+.popular-categories-item h3 {
+    padding: auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popular-categories-item a:hover {
+    /* transform: scale(1.08); */
+    transition: ease .3s;
+    box-shadow: 0px 4px 20px rgba(34, 34, 34, 0.35);
+}
+
+
+/* Styling the footer banner */
+.foot-banner {
+    background-image: -webkit-linear-gradient(top, #fdebd2, #fdebd2 70%, #d7e6f5 70%, #d7e6f5);
+    /* #4d6bc6); */
+}
+
+.foot-banner-container {
+    padding: 36px 54px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.foot-banner-title {
+    text-align: center;
+}
+
+.foot-banner h2 {
+    text-align: center;
+    font-size: 44px;
+    font-weight: 300;
+}
+
+.foot-banner a {
+    text-decoration: underline;
+    font-size: 14px;
+    position: relative;
+    left: -6px;
+}
+
+.foot-banner-content {
+    display: flex;
+    justify-content: center;
+    line-height: 28px;
+}
+
+.foot-banner-content-item {
+    flex: 1;
+    flex-basis: 33%;
+    max-width: 33%;
+    padding: 9px;
+}
+
+
+.foot-banner-content-item h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.foot-banner-content-item p {
+    text-align: left;
+}
+
+.foot-banner-help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot-banner-help h4 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.foot-banner-help a {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 700;
+    border: #222 2px solid;
+    border-radius: 24px;
+    padding: 12px 18px;
+}
+
+.foot-banner-help a:hover {
+    transform: scaleX(1.015) scaleY(1.015) perspective(1px);
+    transition: transform .2s ease-in-out;
+}
+
+
+.foot-banner-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 24px;
+    line-height: 20px;
+}
+
+.foot-banner-email p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.foot-banner-email form {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #222;
+    border-radius: 24px;
+
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 12px;
+    background-color: #fff;
+    max-width: 480px;
+    width: 100%;
+}
+
+.foot-banner-email button {
+    background-color: #fff;
+    padding: 12px 21px;
+    border-radius: 0 24px 24px 0;
+}
+
+.foot-banner-email input {
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 18px;
+    border-radius: 24px 0 0 24px;
+    width: 100%;
+    line-height: 28px;
+}
+
+.foot-banner .foot-banner-email button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Styling the footer */
+
+/* Styling the footer top */
+.footer-top {
+    background-color: #2f466c;
+    color: #fff;
+}
+
+.footer-top a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.footer-top ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-top>ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 24px 24px;
+    text-align: left;
+}
+
+.footer-top>ul>li {
+    flex: 1;
+    flex-basis: 25%;
+    max-width: 25%;
+    padding: 9px;
+}
+
+.footer-top h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    padding-right: 6px;
+}
+
+.footer-list-items li {
+    padding: 6px 0;
+}
+
+/* Styling the footer bottom */
+.footer-bottom {
+    background-color: #1e2d4a;
+    color: #fff;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom .settings {
+    display: flex;
+    align-items: center;
+    white-space: pre;
+    border-radius: 24px;
+    z-index: 10;
+}
+
+.settings:hover {
+    opacity: 1;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom li {
+    padding: 0 12px;
+}
+
+.footer-bottom a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration-color: white;
+}
